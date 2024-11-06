@@ -1,0 +1,19 @@
+body{
+    padding: 0;
+    margin: 0;
+
+    font-family: Helvetica, sans-serif, Arial;
+    background-color: #212121;
+    color: #f1f1f1;
+}
+
+#paskat{
+    position: absolute;
+    z-index: -1;
+}
+
+#bottomtext{
+    font-size: 10.48vw;
+    font-weight: 1000;
+    font-style: italic;
+}
