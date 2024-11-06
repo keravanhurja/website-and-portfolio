@@ -7,6 +7,10 @@ body {
     color: #f1f1f1;
 }
 
+p {
+    font-size: 16px;
+}
+
 h1 {
     font-size: 120px;
     letter-spacing: 0.05em;
@@ -16,13 +20,22 @@ h1 {
     text-align: center;
 }
 
+.padding {
+    padding-top: 14px;
+}
+
 #canvas {
     position: absolute;
     z-index: -1;
 }
 
+#footer {
+    background-color: black;
+}
+
 #bottomtext {
-    font-size: 10.48vw;
+    font-size: 12.3vw;
     font-weight: 1000;
     font-style: italic;
+    letter-spacing: -0.13em;
 }
