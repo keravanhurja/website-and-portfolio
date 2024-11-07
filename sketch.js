@@ -1,5 +1,5 @@
 function setup() {
-  let myCanvas = createCanvas(250, 250);
+  let myCanvas = createCanvas(50, 50);
   myCanvas.parent('canvas')
 }
 
