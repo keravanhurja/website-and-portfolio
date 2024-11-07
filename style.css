@@ -78,7 +78,7 @@ html, body {
         display: flex; /*Show nav links when active*/
     }
 
-    /**/
+    /*Hamburger menu animation*/
     .hamburger.active span:nth-child(1){
         transform: rotate(45deg) translate(5px, 5px);
     }
