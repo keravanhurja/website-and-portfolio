@@ -22,6 +22,7 @@ body {
 
     font-family: Helvetica, sans-serif, Arial;
     background-color: var(--background_color1);
+    background-image: url(assets/noise.svg);
     color: var(--color1);
 }
 
@@ -57,18 +58,20 @@ h1 {
 
 #footer {
     background-color: var(--background_color2);
+    width: 100%;
 }
 
 #bottomtext {
-    font-size: 12.3vw;
+    font-size: 12.32vw;
     font-weight: 1000;
     font-style: italic;
     letter-spacing: -0.13em;
+    margin-top: 80px;
+    margin-bottom: 0;
 }
 
 /*Navigation bar*/
 nav {
-
     .menuItems {
         list-style: none;
         display: flex;
