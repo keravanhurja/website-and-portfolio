@@ -53,7 +53,7 @@ h1 {
 #footer {
     padding-top: 16px;
     background-color: var(--background_color2);
-    width: 100%;
+    width: 100vw;
 }
 
 #bottomtext {
@@ -67,7 +67,7 @@ h1 {
 
 /*Navigation bar*/
 nav {
-    width: 100%;
+    width: 100vw;
     
     .menuItems {
         list-style: none;
