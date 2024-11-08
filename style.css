@@ -6,7 +6,6 @@
     --color2: #f1f1f1;
 
     --p1: 16px;
-    --p1_letterSpacing: 0.1em;
     --h2: 32px;
 }
 
@@ -86,8 +85,13 @@ nav {
 
 .p1 {
     font-size: var(--p1);
-    letter-spacing: var(--p1_letterSpacing);
+    letter-spacing: 0.12em;
     margin: 32px;
+    line-height: 1.4;
+}
+
+.pBold {
+    font-weight: bold;
 }
 
 /*Hamburger menu styling in computer browser*/
@@ -113,12 +117,12 @@ nav {
 
 #copyright {
     font-size: 14px;
-    letter-spacing: var(--p1_letterSpacing);
+    letter-spacing: 0.1em;
     text-align: center;
 }
 
 #bottomText {
-    font-size: 12.65vw;
+    font-size: 12.7vw;
     font-weight: 1000;
     font-style: italic;
     letter-spacing: -0.15em;
@@ -134,7 +138,7 @@ nav {
     /*DISPLAYS HAMBURGER MENU ICON ON MOBILE PHONE*/
     nav{
         .hamWrapper {
-            display: flex;
+            display: sticky;
             flex-direction: row-reverse;
             width: 100%;
             height: 56px;
@@ -142,6 +146,7 @@ nav {
         }
 
         .hamburger {
+            z-index: 1;
             display: flex;
             position: absolute;
             right: 0;
@@ -151,19 +156,19 @@ nav {
         /*HOW THE NAVIGATION MENU IS BUILT*/
         .nav-links {
             /*THIS WILL KEEP MENU OFF-SCREEN INITIALLY*/
+            background-color: rgb(18, 18, 18, 0.98);
+            z-index: 0;
             top: 56px;
             padding: 0;
             width: 100%;
-            left: -100%;
+            top: -100%;
             position: absolute;
             flex-direction: column;
-            transition: left 0.33s;   
+            transition: top 0.33s;
         }
         
-        /*SETS THE */
         .nav-links.active {
             top: 56px;
-            left: 0;
         }
 
         /*THIS ANIMATES THE HAMBURGER TO "X" SHAPE*/
@@ -178,14 +183,5 @@ nav {
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(8.5px, -10px);
         }
-    }
-
-    #bottomText {
-        font-size: 12.65vw;
-        font-weight: 1000;
-        font-style: italic;
-        letter-spacing: -0.15em;
-        margin-block-start: 0;
-        margin-block-end: 0;
     }
 }
