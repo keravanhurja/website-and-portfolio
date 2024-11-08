@@ -44,6 +44,7 @@ nav {
         padding-left: 10%;
         padding-right: 10%;
         margin: 0;
+        max-height: 100vh;
 
         li {
             width: 100%;
@@ -92,7 +93,6 @@ nav {
 /*Hamburger menu styling in computer browser*/
 .hamburger {
     /*This hides hamburger menu by default, for non mobile users*/
-    margin: 8px;
     display: none;
 
     /*This makes the parts pile on top of eachother*/
@@ -133,26 +133,37 @@ nav {
 @media only screen and (max-width: 768px) {
     /*DISPLAYS HAMBURGER MENU ICON ON MOBILE PHONE*/
     nav{
-        .hamburger{
+        .hamWrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            height: 56px;
+            background-color: var(--bg_color2);
+        }
+
+        .hamburger {
             display: flex;
             position: absolute;
-            right: 0px;
+            right: 0;
+            margin: 8px;
         }
-    
+
         /*HOW THE NAVIGATION MENU IS BUILT*/
         .nav-links {
             /*THIS WILL KEEP MENU OFF-SCREEN INITIALLY*/
+            top: 56px;
             padding: 0;
             width: 100%;
-            position: fixed;
-            top: -100%;
+            left: -100%;
+            position: absolute;
             flex-direction: column;
-            transition: top 0.33s;   
+            transition: left 0.33s;   
         }
-    
+        
+        /*SETS THE */
         .nav-links.active {
-            top: 52;
-            transition: top 0.33s;
+            top: 56px;
+            left: 0;
         }
 
         /*THIS ANIMATES THE HAMBURGER TO "X" SHAPE*/
