@@ -10,12 +10,7 @@
     --h2: 32px;
 }
 
-/*Removing margins and paddings*/
-html {
-    margin: 0;
-    padding: 0;
-}
-
+/*REMOVE ALL MARGINS AND PADDINGS FROM HTML, BODY ELEMENTS*/
 body {
     margin: 0;
     padding: 0;
@@ -97,6 +92,7 @@ nav {
 /*Hamburger menu styling in computer browser*/
 .hamburger {
     /*This hides hamburger menu by default, for non mobile users*/
+    margin: 8px;
     display: none;
 
     /*This makes the parts pile on top of eachother*/
@@ -104,16 +100,13 @@ nav {
     cursor: pointer;
 }
 
-/*This is the hamburger icon*/
+/*DESIGNING THE HAMBURGER MENU ICON*/
 .hamburger span {
-    /*Size of the hamburger icon*/
     height: 3px;
     width: 33px;
 
-    /*Color for the hamburger icon*/
     background-color: var(--color2);
 
-    /*gaps for the hamburger icon parts*/
     margin: 5px;
     transition: 0.3s;
 }
@@ -138,8 +131,43 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
+    /*DISPLAYS HAMBURGER MENU ICON ON MOBILE PHONE*/
+    nav{
+        .hamburger{
+            display: flex;
+            position: absolute;
+            right: 0px;
+        }
+    
+        /*HOW THE NAVIGATION MENU IS BUILT*/
+        .nav-links {
+            /*THIS WILL KEEP MENU OFF-SCREEN INITIALLY*/
+            padding: 0;
+            width: 100%;
+            position: fixed;
+            top: -100%;
+            flex-direction: column;
+            transition: top 0.33s;   
+        }
+    
+        .nav-links.active {
+            top: 52;
+            transition: top 0.33s;
+        }
+
+        /*THIS ANIMATES THE HAMBURGER TO "X" SHAPE*/
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8.5px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8.5px, -10px);
+        }
     }
+
+    
 }
