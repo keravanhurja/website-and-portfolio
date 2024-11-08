@@ -1,58 +1,44 @@
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--Defining viewport size-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--Importing javascript sketch-->
-        <link rel="script" href="sketch.js">
+    <!--Website Title-->
+    <title>Ansamaa Joona</title>
 
-        <!--Importing CSS stylesheet-->
-        <link rel="stylesheet" href="style.css">
-
-        <title>Kotisivu</title>
-
-        <!--Importing p5.js libraries and sketch.js-->
-        <script src="libraries/p5.min.js"></script>
-        <script src="libraries/p5.sound.min.js"></script>
-    </head>
-
-    <body>
-        <!--Navigation bar-->
-        <nav>
-            <ul class="menuItems">
-                <li><a href='#' data-item='Home'>Home</a></li>
-                <li><a href='#' data-item='About'>About</a></li>
-                <li><a href='#' data-item='portfolio'>portfolio</a></li>
-                <li><a href='#' data-item='Contact'>Contact</a></li>
-            </ul>
-        </nav>
-
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <!--This is the hamburger menu icon-->
         <div class="hamburger">
-            <!-- Icon for the hamburger menu -->
             <span></span>
             <span></span>
             <span></span>
         </div>
 
-        <!--Importing .js before body closing tag-->
-        <script src="sketch.js"></script>
-    </body>
-    
-    <footer id="footer">
-        <!--Contact Form-->
-        <div id="contactForm">
-            <!--something here-->
-        </div>
+        <!--Here are the links for navigation bar-->
+        <ul class="nav-links">
+            <li><a href="#" data-item="Home">Home</a></li>
+            <li><a href="#" data-item="About">About</a></li>
+            <li><a href="#" data-item="Portfolio">Portfolio</a></li>
+            <li><a href="#" data-item="Contact">Contact</a></li>
+            <li><a href="#" data-item="Store">Store</a></li>
+        </ul>
+    </nav>
 
-        <!--Copyright-->
-        <p class="center">
-            © 2024 Joona Ansamaa, All Rights Reserved
-        </p>
+    <!--Under Construction Text-->
+    <p class="p1" id="underConstruction">Under Construction!<br>Might be ready someday, who knows?</p>
+</body>
+<footer>
+    <!--Copyright Stuff-->
+    <p id="copyright">
+        ©2024 Joona Ansamaa, All Rights Reserved
+    </p>
 
-        <!--Text on bottom-->
-        <p id="bottomtext">
-            ANSAMAAJOONA
-        </p>
-    </footer>
+    <!--Cool bottomText-->
+    <p id="bottomText">
+        ANSAMAAJOONA
+    </p>
+</footer>
 </html>

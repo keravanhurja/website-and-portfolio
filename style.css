@@ -1,26 +1,97 @@
 /*base colors and attributes*/
 :root {
-    --background_color1: #212121;
-    --background_color2: #111111;
-    --base_color: grey;
-    --color1: #f1f1f1;
+    --bg_color1: #212121;
+    --bg_color2: #121212;
+    --color1: grey;
+    --color2: #f1f1f1;
 
     --p1: 16px;
-    --p2: 13px;
+    --p1_letterSpacing: 0.1em;
     --h2: 32px;
 }
 
-html, body {
+/*Removing margins and paddings*/
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 0;
+    overflow-x: hidden;
+
+    font-family: Helvetica, sans-serif;
+    color: var(--color2);
+    background-color: var(--bg_color1);
+}
+
+footer {
+    width: 100%;
     margin: 0;
-    font-family: Helvetica, sans-serif, Arial;
-    background-color: var(--background_color1);
-    color: var(--color1);
+    padding: 0;
+    background-color: var(--bg_color2);
+}
+
+/*NAVBAR ANIMATION AND STUFF*/
+nav {
+    width: 100%;
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        background-color: var(--bg_color2);
+        padding-inline-start: 0;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin: 0;
+
+        li {
+            width: 100%;
+            text-align: center;
+            margin-top: 32px;
+            margin-bottom: 32px;
+
+            a {
+                /*THIS ADJUSTS THE BASE PARAMETERS FOR NAVBAR ITEM*/
+                text-decoration: none;
+                font-weight: bolder;
+                color: var(--color1);
+                font-size: 32px;
+                position: relative;
+                text-transform: lowercase;
+                letter-spacing: 0.08em;
+                
+                /*THIS IS WHAT HOW NAVBAR ITEM WILL LOOK LIKE WHEN HOVERED*/
+                &::before {
+                    content: attr(data-item);
+                    color: var(--color2);
+                    position: absolute;
+                    width: 0;
+                    overflow: hidden;
+                    transition: all 0.22s ease-in-out;
+                }
+
+                /*THIS ADJUSTS HOW FAST TRANSITION IS AND HOW FAR IT GOES*/
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        transition: all 0.44s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.p1 {
+    font-size: var(--p1);
+    letter-spacing: var(--p1_letterSpacing);
+    margin: 32px;
 }
 
 /*Hamburger menu styling in computer browser*/
@@ -40,142 +111,35 @@ html, body {
     width: 33px;
 
     /*Color for the hamburger icon*/
-    background-color: var(--color1);
+    background-color: var(--color2);
 
     /*gaps for the hamburger icon parts*/
     margin: 5px;
     transition: 0.3s;
 }
 
-/*If the screen is less than 768px wide*/
-@media only screen and (max-width: 768px){
-    /*Styles for mobile devices*/
-    html, body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: 0;
-    }
-
-    .container {
-        max-width: 100vw;
-        overflow-y: auto;
-    }
-
-    .menuItems {
-        display: none; /*This hides navbar links by default*/
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .menuItems li {
-        margin: 15px 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    /*Active Menu styling*/
-    .menuItems.active {
-        display: flex; /*Show nav links when active*/
-    }
-
-    /*Hamburger menu animation*/
-    .hamburger.active span:nth-child(1){
-        transform: rotate(45deg) translate(8.5px, 10px);
-    }
-
-    .hamburger.active span:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3){
-        transform: rotate(-45deg) translate(8.5px, -10px);
-    }
-
-    body {
-        font-size: var(--p1);
-
-    }
-
-    footer {
-        width: 100%;
-    }
+#copyright {
+    font-size: 14px;
+    letter-spacing: var(--p1_letterSpacing);
+    text-align: center;
 }
 
-#footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 16px;
-    background-color: var(--background_color2);
-    width: 100vw;
-}
-
-#bottomtext {
-    font-size: 12.32vw;
+#bottomText {
+    font-size: 12.65vw;
     font-weight: 1000;
     font-style: italic;
-    letter-spacing: -0.13em;
-    margin-top: 80px;
-    margin-bottom: 0;
+    letter-spacing: -0.15em;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-/*Navigation bar*/
-nav {
-    width: 100vw;
-    
-    .menuItems {
-        list-style: none;
+#underConstruction {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
         display: flex;
-        background-color: var(--background_color2);
-        padding-inline-start: 0;
-        padding-left: 20vw;
-        padding-right: 20vw;
-        margin: 0;
-
-        li {
-            width: 100%;
-            text-align: center;
-            margin-top: 32px;
-            margin-bottom: 32px;
-
-            a  {
-                /*Setting how the text should look in navbar*/
-                text-decoration: none;
-                font-weight: bold;
-                color: var(--base_color);
-                font-size: var(--h2);
-                transition: all 0.25s ease-in-out;
-                position: relative;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-  
-                &::before {
-                    content: attr(data-item);
-                    transition: 0.25s;
-                    color: var(--color1);
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    width: 0;
-                    overflow: hidden;
-                }
-  
-                &:hover {
-                    &::before {
-                        width: 100%;
-                        transition: all 0.25s ease-in-out;
-                    }
-                }
-            }
-        }
+        flex-direction: column;
     }
 }
