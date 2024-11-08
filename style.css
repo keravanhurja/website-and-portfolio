@@ -18,25 +18,32 @@ html, body {
     min-height: 100vh;
     padding: 0;
     margin: 0;
-
     font-family: Helvetica, sans-serif, Arial;
-
     background-color: var(--background_color1);
     color: var(--color1);
 }
 
 /*Hamburger menu styling in computer browser*/
 .hamburger {
+    /*This hides hamburger menu by default, for non mobile users*/
     display: none;
+
+    /*This makes the parts pile on top of eachother*/
     flex-direction: column;
     cursor: pointer;
 }
 
+/*This is the hamburger icon*/
 .hamburger span {
+    /*Size of the hamburger icon*/
     height: 3px;
-    width: 25px;
-    background-color: var(--background_color2);
-    margin: 4px;
+    width: 33px;
+
+    /*Color for the hamburger icon*/
+    background-color: var(--color1);
+
+    /*gaps for the hamburger icon parts*/
+    margin: 5px;
     transition: 0.3s;
 }
 
@@ -80,7 +87,7 @@ html, body {
 
     /*Hamburger menu animation*/
     .hamburger.active span:nth-child(1){
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(8.5px, 10px);
     }
 
     .hamburger.active span:nth-child(2){
@@ -88,7 +95,7 @@ html, body {
     }
 
     .hamburger.active span:nth-child(3){
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(8.5px, -10px);
     }
 
     body {
@@ -101,33 +108,10 @@ html, body {
     }
 }
 
-footer {
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    font-size: var(--p1);
-    letter-spacing: 0.1em;
-    margin: 0;
-}
-
-h1 {
-    font-size: 6vw;
-    letter-spacing: 0.01em;
-    margin: 0;
-}
-
-.center {
-    text-align: center;
-}
-
-#canvas {
-    position: absolute;
-    z-index: -1;
-}
-
 #footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 16px;
     background-color: var(--background_color2);
     width: 100vw;
