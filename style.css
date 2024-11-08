@@ -180,5 +180,12 @@ nav {
         }
     }
 
-    
+    #bottomText {
+        font-size: 12.65vw;
+        font-weight: 1000;
+        font-style: italic;
+        letter-spacing: -0.15em;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
 }
