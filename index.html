@@ -9,22 +9,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="underConstruction">
-        <!--Under Construction Text-->
-        <p class="p1" id="underConstruction">Under Construction!<br>Ready sooner than expected...</p>
-    </div>  
+    <div class="site-content">
+        <!--Tässä tehdään gridi portfolion jutuille-->
+        <section id="portfolio" class="grid">
+
+            <!--Ensimmäinen grid-item-->
+            <a class="project-cover">
+                <img src="assets/tbone_stack.png" alt="Kuva 1" class="portfolio-kuva">
+                <div class="details-wrap">
+                    <div class="details-inner">
+                        <div class="details-header">
+                            PROJEKTI
+                        </div>
+                        <div class="details-desc">
+                            Product Design | 3D-Printing | Individual Project
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!--Toinen grid-item-->
+            <a class="project-cover">
+                <img src="assets/parts.png" alt="Kuva 1" class="portfolio-kuva">
+                <div class="details-wrap">
+                    <div class="details-inner">
+                        <div class="details-header">
+                            RISUKEITIN
+                        </div>
+                        <div class="details-desc">
+                            Product Desing | Team Project
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </div>
 
     <script src="sketch.js" defer></script>
 </body>
 <footer>
     <!--Copyright Stuff-->
-    <p id="copyright">
-        ©2024 Joona Ansamaa, All Rights Reserved
-    </p>
+    <h3 id="copyright">©2024 Joona Ansamaa, All Rights Reserved<h3/>
 
     <!--Cool bottomText-->
-    <p id="bottomText">
-        ANSAMAAJOONA
-    </p>
+    <p id="bottomText">ANSAMAAJOONA</p>
 </footer>
 </html>
