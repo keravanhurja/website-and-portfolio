@@ -53,22 +53,21 @@ footer {
 }
 
 .site-header {
-    align-items: center;
+    display: block;
     background-color: var(--bg_color);
     height: 70px;
-    padding-bottom: 0;
-    padding-top: 0;
-    padding-left: 4%;
-    padding-right: 4%;
     position: fixed;
     z-index: 1;
-    right: 0;
-    top: 0;
     width: 100%;
 }
 
 nav {
-    vertical-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 92%;
+    height: 100%;
 }
 
 .menu-item {
@@ -76,7 +75,7 @@ nav {
     padding-right: 24px;
 }
 
-nav.menu-item:first-child {
+.menu-item:first-child {
     padding-left: 0 !important;
 }
 
