@@ -1,6 +1,6 @@
 /*base colors and attributes*/
 :root {
-    --bg_color: #101010;
+    --bg_color: #080808;
     --color1: #aaaaaa;
     --color2: #f1f1f1;
 }
@@ -36,11 +36,27 @@ footer {
     bottom: 0px;
 }
 
+.site-header {
+    align-items: center;
+    background-color: var(--bg_color);
+    height: 70px;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 4%;
+    padding-right: 4%;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
 .site-content {
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 96%;
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 92%;
     max-width: 1600px;
+    z-index: 0;
 }
 
 #portfolio {
@@ -52,7 +68,8 @@ footer {
 
 /*Tässä projektin esittelykuvake saa perus määritykset*/
 .project-cover {
-    width: calc(50% - 8px);
+    width: calc(50% - 12px);
+    height: width;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -61,7 +78,7 @@ footer {
 
 /*Jokainen esittelykuvake rivissä ensimmäisenä näyttää tältä*/
 .project-cover:nth-child(2n - 1) {
-    margin-right: 16px;
+    margin-right: 24px;
     margin-left: 0;
 }
 
@@ -88,6 +105,7 @@ footer {
     object-fit: cover;
     width: calc(100% + 2px);
     vertical-align: top;
+    aspect-ratio: 4/3;
 }
 
 .details-inner{
@@ -144,7 +162,11 @@ footer {
         margin-right: 0px;
     }
 
-    h3 {
+    .details-header {
+        font-size: 14px;
+    }
+
+    .details-desc {
         font-size: 12px;
     }
 }
