@@ -28,10 +28,19 @@ h3 {
     letter-spacing: 0.08em;
 }
 
+.small-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    color: var(--color1);
+}
+
 footer {
     width: 100%;
     margin-top: auto;
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 0;
     background-color: var(--bg_color);
     bottom: 0px;
 }
@@ -64,7 +73,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
-
 
 /*Tässä projektin esittelykuvake saa perus määritykset*/
 .project-cover {
@@ -123,12 +131,7 @@ footer {
     line-height: 20px;
 }
 
-.details-desc {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    color: var(--color1);
+#details-desc {
     padding-top: 8px;
 }
 
@@ -168,5 +171,9 @@ footer {
 
     .details-desc {
         font-size: 12px;
+    }
+
+    #bottomText {
+        display: none;
     }
 }
