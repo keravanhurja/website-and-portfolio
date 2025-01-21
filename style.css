@@ -113,7 +113,7 @@ footer {
     object-fit: cover;
     width: calc(100% + 2px);
     vertical-align: top;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/2;
 }
 
 .details-inner{
