@@ -21,11 +21,9 @@ body {
     background-color: var(--bg_color);
 }
 
-h3 {
+a {
+    text-decoration: none;
     color: var(--color1);
-    font-size: 14px;
-    font-weight: normal;
-    letter-spacing: 0.08em;
 }
 
 .small-text {
@@ -34,6 +32,15 @@ h3 {
     line-height: 18px;
     letter-spacing: 0.05em;
     color: var(--color1);
+}
+
+.header3 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding-bottom: 3px;
+    line-height: 20px;
+    color: #f1f1f1;
 }
 
 footer {
@@ -58,6 +65,19 @@ footer {
     right: 0;
     top: 0;
     width: 100%;
+}
+
+nav {
+    vertical-align: center;
+}
+
+.menu-item {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+nav.menu-item:first-child {
+    padding-left: 0 !important;
 }
 
 .site-content {
@@ -124,11 +144,7 @@ footer {
 }
 
 .details-header {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    padding-bottom: 3px;
-    line-height: 20px;
+    
 }
 
 #details-desc {
@@ -152,6 +168,10 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
     #portfolio {
         padding-top: 80px;
     }
@@ -171,6 +191,10 @@ footer {
 
     .details-desc {
         font-size: 12px;
+    }
+
+    #copyright {
+        padding: 80px;
     }
 
     #bottomText {
