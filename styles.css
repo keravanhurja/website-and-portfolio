@@ -105,8 +105,8 @@ li a:hover {
 /*----------------------------------------*/
 /*SITE CONTENT WRAPPER*/
 /*----------------------------------------*/
-.wrap {
-    padding-top: 160px;
+.gridwrap {
+    padding-top: 120px;
     margin-left: 4%;
     margin-right: 4%;
     width: 92%;
@@ -224,12 +224,59 @@ li a:hover {
 /*----------------------------------------*/
 /*ABOUT ME PAGES*/
 /*----------------------------------------*/
-.scroll-container {
-
+.wrap {
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 92%;
+    min-height: 100vh;
+    z-index: 0;
 }
 
-.profile-page {
+.scroll-container {
+    height: 100vh;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
 
+.page {
+    height: 100vh;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    height: 100%;
+}
+
+.profile {
+    text-align: left;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-picture {
+    height: 480px;
+    width: 480px;
+}
+
+.profile-text {
+    padding-left: 40px;
+    flex: 1;
+}
+
+.profile-text p {
+    padding-top: 16px;
 }
 
 /*----------------------------------------*/
