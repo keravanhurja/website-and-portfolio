@@ -266,6 +266,7 @@ li a:hover {
 }
 
 .profile-picture {
+    object-fit: cover;
     height: 480px;
     width: 480px;
 }
