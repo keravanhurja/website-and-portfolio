@@ -2,87 +2,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Website Title-->
     <title>Ansamaa | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!--NavBar jne-->
-    <header class="site-header">
-        <nav>
-            <div class="menu-item">
-                <a href="./index.html" class="active">PORTFOLIO</a>
-            </div>
-            <div class="menu-item">
-                <a href="./about.html" class="header3">ABOUT</a>
-            </div>
-            <div class="menu-item">
-                <a href="./notillegal.html" class="header3">NOT.ILLEGAL</a>
-            </div>
-        </nav>
-    </header>
+    <div class="navbar">
+        <ul>
+            <li><a href="./index.html" class="active">Portfolio</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./notillegal.html">Not.illegal</a></li>
+        </ul>
+    </div>
 
-    <!--Joku wrapperi contsalle-->
-    <div class="site-content">
-        <!--Tässä tehdään gridi portfolion jutuille-->
-        <section id="portfolio" class="grid">
+    <div class="wrap">
+        <section class="grid">
+            <a href="#" class="project-cover">
+                <div class="img-cover">
+                    <img src="assets/dice/dice_1.png" alt="Dice" class="portfolio_img">
+                </div>
 
-            <!--Ensimmäinen grid-item-->
-            <a class="project-cover">
-                <img src="assets/dice/dice_1.png" alt="Kuva 1" class="portfolio-kuva">
-                <div class="details-wrap">
-                    <div class="details-inner">
-                        <div class="cover-header">
-                            DICE
-                        </div>
-                        <div id="details-desc" class="small-text">
-                            Audio | 3D-Printing | Product Design | Individual Project
-                        </div>
+                <!--PROJECT DETAILS-->
+                <div class="project-description">
+                    <div>
+                        <h3>DIE</h3>
+                    </div>
+                    <div class="details">
+                        <p>Audio | 3D-Printing | Product Design | Individual Project</p>
                     </div>
                 </div>
             </a>
+            <a href="#" class="project-cover">
+                <div class="img-cover">
+                    <img src="assets/dice/dice_1.png" alt="Dice" class="portfolio_img">
+                </div>
 
-            <!--Toinen grid-item-->
-            <a class="project-cover">
-                <img src="assets/risukeitin/risukeitin_1.png" alt="Kuva 2" class="portfolio-kuva">
-                <div class="details-wrap">
-                    <div class="details-inner">
-                        <div class="cover-header">
-                            TWIGSTOVE
-                        </div>
-                        <div id="details-desc" class="small-text">
-                            Coursework | Product Design | Team Project
-                        </div>
+                <!--PROJECT DETAILS-->
+                <div class="project-description">
+                    <div>
+                        <h3>TWIGSTOVE</h3>
+                    </div>
+                    <div class="details">
+                        <p>Audio | 3D-Printing | Product Design | Individual Project</p>
                     </div>
                 </div>
             </a>
+            <a href="#" class="project-cover">
+                <div class="img-cover">
+                    <img src="assets/dice/dice_1.png" alt="" class="portfolio_img">
+                </div>
 
-            <a class="project-cover">
-                <img src="assets/kerava-mielinen/kerava-mielinen_1.png" alt="Kuva 3" class="portfolio-kuva">
-                <div class="details-wrap">
-                    <div class="details-inner">
-                        <div class="cover-header">
-                            KERAVA-MIELINEN
-                        </div>
-                        <div id="details-desc" class="small-text">
-                            Overall Patch | Graphic Design | Individual Project
-                        </div>
+                <!--PROJECT DETAILS-->
+                <div class="project-description">
+                    <div>
+                        <h3>KERAVA-MIELINEN</h3>
+                    </div>
+                    <div class="details">
+                        <p>Audio | 3D-Printing | Product Design | Individual Project</p>
                     </div>
                 </div>
             </a>
+            <a href="./notillegal.html" class="project-cover">
+                <div class="img-cover">
+                    <img src="assets/dice/dice_1.png" alt="Dice" class="portfolio_img">
+                </div>
 
-            <a class="project-cover" href="./notillegal.html">
-                <img src="assets/notillegal/notillegal.png" alt="Kuva 4" class="portfolio-kuva">
-                <div class="details-wrap">
-                    <div class="details-inner">
-                        <div class="cover-header">
-                            NOT.ILLEGAL
-                        </div>
-                        <div id="details-desc" class="small-text">
-                            3D-Printing Service | Branding | Individual Project
-                        </div>
+                <!--PROJECT DETAILS-->
+                <div class="project-description">
+                    <div>
+                        <h3>NOT.ILLEGAL</h3>
+                    </div>
+                    <div class="details">
+                        <p>Audio | 3D-Printing | Product Design | Individual Project</p>
                     </div>
                 </div>
             </a>
@@ -90,17 +83,23 @@
     </div>
 
     <footer>
-        <!--Copyright Stuff-->
-        <div class="small-text" id="copyright">
-            ©2024 Joona Ansamaa, All Rights Reserved
-        </div>
-    
-        <!--Cool bottomText-->
-        <div id="bottomText">
+        <div id="bottomtxt">
             ANSAMAAJOONA
         </div>
+        
+        <p class="footer-txt">
+            mail@ansamaajoona.fi<br>
+            -<br>
+            Lahti, Finland<br>
+            Trapland, 3158668-1
+        </p>
+        <hr>
+
+        <p class="footer-txt">
+            &copy;2024 Joona Ansamaa, All Rights Reserved
+        </p>
     </footer>
 
-    <script src="sketch.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>

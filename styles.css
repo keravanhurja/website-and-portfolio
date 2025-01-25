@@ -1,0 +1,341 @@
+:root {
+    --color_dark: #080808;
+    --color_offwhite: #f1f1f1;
+    --color_light_grey: #aaaaaa;
+    --color_grey: #656565;
+    --color_purple: #6C3BAA;
+
+    /*SETS DEFAULT BACKGROUND AND TEXT VALUES*/
+    background-color: var(--color_dark);
+    color: var(--color_light_grey);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*----------------------------------------*/
+/*SETTING UP THINGS*/
+/*----------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--color_light_grey);
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: var(--color_light_grey);
+    line-height: 20px;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    color: var(--color_offwhite);
+    letter-spacing: 0.03em;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--color_offwhite);
+    line-height: 22px;
+}
+
+hr {
+    border-color: var(--color_purple);
+}
+
+.offwhite {
+    color: var(--color_offwhite);
+}
+
+/*----------------------------------------*/
+/*NAVIGATION BAR STYLING*/
+/*----------------------------------------*/
+.navbar {
+    /*THIS MAKES NAVBAR STICK TO THE TOP OF THE SCREEN*/
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: var(--color_dark);
+    z-index: 3;
+}
+
+.navbar ul {
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 92%;
+    height: 100%;
+    align-content: center;
+}
+
+li {
+    display: inline;
+
+    /*DELETES THE WHITE SPACE BETWEEN LI ELEMENTS*/
+    float: left;
+}
+
+li a {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 22px;
+    color: var(--color_light_grey);
+    padding-right: 40px;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+/*THIS MAKES ACTIVE LINK BRIGHTER*/
+.active {
+    color: var(--color_offwhite);
+}
+
+/*----------------------------------------*/
+/*SITE CONTENT WRAPPER*/
+/*----------------------------------------*/
+.wrap {
+    padding-top: 160px;
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 92%;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+/*----------------------------------------*/
+/*PROJECT CARD GRID*/
+/*----------------------------------------*/
+.grid {
+    /*CENTERED CONTENT*/
+    margin: auto;
+    display: flex;
+
+    /*WRAPS CONTENT*/
+    flex-wrap: wrap;
+
+    /*SETS MAX WIDTH FOR BIGGER SCREENS*/
+    max-width: 1600px;
+}
+
+/*THIS SETS THE WIDTH OF A PROJECT CARD*/
+.project-cover {
+    width: calc(50% - 12px);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*SETS MARGIN FOR ONLY THE FIRST CARD IN A ROW*/
+.project-cover:nth-child(2n - 1) {
+    margin-right: 24px;
+    margin-left: 0;
+}
+
+.project-cover:nth-child(2n) {
+    margin-right: 0;
+}
+
+/*SETTING IMAGE SIZE/ASPECT RATIO FOR PROJECT CARD*/
+.img-cover {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    aspect-ratio: 3/2;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.portfolio_img {
+    width: 100%;
+    height: 100%;
+
+    /*IMAGE IS SIZED TO MAINTAIN ITS ASPECT RATIO WHILE FILLING THE ELEMENT*/
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.img-cover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    z-index: 1;
+}
+
+/*SCALE IMAGE ON HOVER*/
+.img-cover:hover {
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
+.img-cover:hover::after {
+    opacity: 1;
+}
+
+/*SETTING STYLING FOR PROJECT CARD DESCRIPTION*/
+.project-description {
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 10%;
+    z-index: 2;
+}
+
+.project-description hr {
+    width: 50%;
+}
+
+.details {
+    padding-top: 12px;
+}
+
+/*----------------------------------------*/
+/*ABOUT ME PAGES*/
+/*----------------------------------------*/
+.scroll-container {
+
+}
+
+.profile-page {
+
+}
+
+/*----------------------------------------*/
+/*SKILLS AND STUFF*/
+/*----------------------------------------*/
+.skills-page {
+
+}
+
+.skills-page h1 {
+    margin-top: 32px;
+}
+
+.xp-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.xp-list li {
+    padding-top: 16px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-list p {
+    color: var(--color_offwhite);
+}
+
+/*SKILLS BUBBLES*/
+.skills-list li {
+    margin-top: 16px;
+    margin-left: 16px;
+    padding: 16px;
+    outline: solid;
+    outline-color: var(--color_purple);
+    outline-width: 2px;
+    border-radius: 26px;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    -ms-border-radius: 26px;
+    -o-border-radius: 26px;
+}
+
+/*----------------------------------------*/
+/*FOOTER STYLING*/
+/*----------------------------------------*/
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+#bottomtxt {
+    text-align: left;
+    color: var(--color_offwhite);
+    font-size: 12.7vw;
+    font-weight: 1000;
+    font-style: italic;
+    letter-spacing: -0.15em;
+}
+
+.footer-txt {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/*----------------------------------------*/
+/*CHECK FIRST IF USER IS ON MOBILE*/
+/*----------------------------------------*/
+@media only screen and (max-width: 768px) {
+    p {
+        letter-spacing: 0.06em;
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+    
+    /*THIS HIDES NAVBAR ON MOBILE*/
+    .navbar {
+        display: none;
+    }
+
+    .wrap {
+        padding-top: 80px;
+        margin-left: 6%;
+        margin-right: 6%;
+        width: 88%;
+    }
+
+    /*ONYL ONE PROJECT CARD IN A ROW*/
+    .project-cover {
+        margin: 0;
+        width: 100%;
+    }
+
+    /*REMOVES USELESS MARGINS*/
+    .project-cover:nth-child(2n - 1) {
+        margin-right: 0px;
+    }
+
+    /*BOTTOM TEXT DOESN'T WORK ON MOBILE YET*/
+    #bottomtxt {
+        display: none;
+    }
+}
