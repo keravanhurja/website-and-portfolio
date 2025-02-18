@@ -70,9 +70,9 @@ hr {
 }
 
 .navbar ul {
-    margin-left: 4%;
-    margin-right: 4%;
-    width: 92%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
     height: 100%;
     align-content: center;
 }
@@ -107,9 +107,9 @@ li a:hover {
 /*----------------------------------------*/
 .gridwrap {
     padding-top: 120px;
-    margin-left: 4%;
-    margin-right: 4%;
-    width: 92%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
     min-height: 100vh;
     z-index: 0;
 }
@@ -225,9 +225,9 @@ li a:hover {
 /*ABOUT ME PAGES*/
 /*----------------------------------------*/
 .wrap {
-    margin-left: 4%;
-    margin-right: 4%;
-    width: 92%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
     min-height: 100vh;
     z-index: 0;
 }
