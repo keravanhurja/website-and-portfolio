@@ -33,3 +33,10 @@ leftArrow.addEventListener('click', () => scrollToPage('left'));
 
 // Initialize arrow visibility
 updateArrows();
+
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.navlist');
+
+mobileMenu.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
