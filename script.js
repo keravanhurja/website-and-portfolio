@@ -4,7 +4,7 @@ const rightArrow = document.querySelector('.right-arrow');
 
 // Track the current page index
 let currentPageIndex = 0;
-const totalPages = 2; // Limit to two pages (index 0 and 1)
+const totalPages = 2; // Now just two pages: profile and combined
 
 // Scroll to the next or previous page
 function scrollToPage(direction) {
